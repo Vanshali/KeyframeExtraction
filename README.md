@@ -8,9 +8,10 @@ colonoscopy videos requires an enormous amount of reviewing time, which burdens 
 
 ## 2. Framework Overview
 ![Flowchart depicting the role of different stages in the proposed work](figures/framework.png)
-*Figure 1:  Flowchart depicting the role of different stages in the proposed work*
+*Figure 1:  Flowchart depicting the role of different stages in the proposed work.*
 
 ## 3. YcOLOn Architecture
-
+![Different components of the proposed model.](figures/YcOLOn.png)
+*Figure 2: Different components of the proposed model. AFF is the attention feature fusion module, and MS-CAM is the multi-scale channel attention component of the AFF.*
 
 This repository will be updated soon!
