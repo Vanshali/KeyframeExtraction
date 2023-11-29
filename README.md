@@ -14,4 +14,20 @@ colonoscopy videos requires an enormous amount of reviewing time, which burdens 
 ![Different components of the proposed model.](figures/YcOLOn.png)
 *Figure 2: Different components of the proposed model. AFF is the attention feature fusion module, and MS-CAM is the multi-scale channel attention component of the AFF.*
 
+## 4. Results
+
+
+## 5. Usage
+
+## 6. Citation:
+```
+@article{sharma2023multi,
+  title={A Multi-Scale Attention Framework for Automated Polyp Localization and Keyframe Extraction From Colonoscopy Videos},
+  author={Sharma, Vanshali and Sasmal, Pradipta and Bhuyan, MK and Das, Pradip K and Iwahori, Yuji and Kasugai, Kunio},
+  journal={IEEE Transactions on Automation Science and Engineering},
+  year={2023},
+  publisher={IEEE}
+}
+```
+
 This repository will be updated soon!
