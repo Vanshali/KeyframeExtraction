@@ -25,8 +25,40 @@ colonoscopy videos requires an enormous amount of reviewing time, which burdens 
 ### 4.3 Stage-III and Stage-IV: Redundancy Removal and Polyp Localization
 ![Stage-IV](figures/Table4.png)
 ![Score graph](figures/score_graph.png)
+*Figure 3: The graph plots the dissimilarity scores, CS, PI, CD, and final scores of a video shot segmented from a patient’s video sequence. The two dotted boxes over the sub-plots represent two independent clusters. The keyframe selected from each cluster is highlighted.*
+
+![YcOLOn_results](figures/YcOLOn_results.png)
+*Figure 4: Sample images illustrating the comparative analysis of the localization performance: (a) YOLOv5, and (b) YcOLOn. The green, yellow, and pink color bounding boxes denote the ground truth, YOLOv5, and YcOLOn predictions, respectively.*
 
 ## 5. Usage
+#### Prerequisites
+```
+cd YcOLOn
+pip install -r requirements.txt
+```
+Alternatively, you can use the Dockerfile provided at /YcOLOn/utils/docker/.
+
+Set the dataset path in coco128.yaml provided at YcOLOn/data/.
+
+#### Training YcOLOn
+```
+cd YcOLOn
+python3 train.py --img 256 --batch 10 --epochs 20 --workers 0 --data coco128.yaml --weights '' --cfg YcOLOn.yaml
+```
+
+#### Validate/Test using YcOLOn
+```
+cd YcOLOn
+python3 val.py --task test --img 256 --workers 0 --single-cls --save-txt --save-conf --weights ./runs/train/exp/weights/best.pt
+```
+Replace exp with the folder in which your model's best results are saved during training. 
+
+#### Detect using YcOLOn
+```
+python3 detect.py --weights ./runs/train/exp/weights/best.pt --img 256 --source test.jpg --visualize --save-crop
+```
+Replace exp with the folder in which your model's best results are saved during training. 
+Replace test.jpg with the image name which you want to test.
 
 ## 6. Citation:
 ```
@@ -38,5 +70,7 @@ colonoscopy videos requires an enormous amount of reviewing time, which burdens 
   publisher={IEEE}
 }
 ```
+
+Please contact vanshalisharma@iitg.ac.in if you have questions about our work and research activities. We always welcome collaboration and joint research!
 
 This repository will be updated soon!
