@@ -15,7 +15,16 @@ colonoscopy videos requires an enormous amount of reviewing time, which burdens 
 *Figure 2: Different components of the proposed model. AFF is the attention feature fusion module, and MS-CAM is the multi-scale channel attention component of the AFF.*
 
 ## 4. Results
+### 4.1 Stage-I: Quality Assessment
+![Stage-I](figures/Table1.png)
 
+### 4.2 Stage-II: Polyp Detection
+![Stage-IIa](figures/Table2.png)
+![Stage-IIb](figures/Table3.png)
+
+### 4.3 Stage-III and Stage-IV: Redundancy Removal and Polyp Localization
+![Stage-IV](figures/Table4.png)
+![Score graph](figures/score_graph.png)
 
 ## 5. Usage
 
